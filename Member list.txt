@@ -1,7 +1,5 @@
-nathan
-adam
-nicolas
-jinwoo
-mark
-
-jimmy smith
+Adam
+Jinwoo
+Mark
+Nathan
+Nicolas
