@@ -53,4 +53,11 @@ public class LoadSceneManager : MonoBehaviour {
     {
         SceneManager.LoadScene(sceneIndex);
     }
+
+
+    public void QuitGame()
+    {
+        Debug.Log("ASD");
+        Application.Quit();
+    }
 }
