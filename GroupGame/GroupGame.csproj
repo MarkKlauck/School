@@ -84,6 +84,8 @@
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\SpawnControl.cs" />
     <Compile Include="Assets\Scripts\stuff.cs" />
+    <Compile Include="Assets\TornadoBanditsStudio\Low Poly Free Pack\Scripts\TBS_CameraMovement.cs" />
+    <Compile Include="Assets\TornadoBanditsStudio\Low Poly Free Pack\Water\TBS_Water.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
