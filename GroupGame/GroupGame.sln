@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupGame", "GroupGame.csproj", "{B54D32B2-DF01-0763-E922-E9681F7253FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupGame.Editor", "GroupGame.Editor.csproj", "{E21CEF54-D043-D050-FDC5-DBFB1C68D673}"
