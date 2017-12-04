@@ -7,12 +7,42 @@ public class SpawnControl : MonoBehaviour {
     public GameObject enemyPrefab;
 	// Use this for initialization
 	void Start () {
-        Instantiate(enemyPrefab, spawnLocation[0].transform);
-        Instantiate(enemyPrefab, spawnLocation[1].transform);
+        Instantiate(enemyPrefab, spawnLocation[0].transform.position, Quaternion.identity);
+        Instantiate(enemyPrefab, spawnLocation[1].transform.position, Quaternion.identity);
+        Instantiate(enemyPrefab, spawnLocation[2].transform.position, Quaternion.identity);
+        Instantiate(enemyPrefab, spawnLocation[3].transform.position, Quaternion.identity);
+        StartCoroutine(SpawnEnemies());
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
+    IEnumerator SpawnEnemies()
+    {
+        int n = spawnLocation.Length - 1;
+        int o = 30;
+        int Ecount = 4;
+        int lastSpawnLoc = 0;
+        while (o > 0)
+        {
+            yield return new WaitForSeconds(3);
+            int i = Random.Range(0, n);
+            if(i == lastSpawnLoc)
+            {
+                i++;
+                if(i>n)
+                {
+                    i = 0;
+                }
+                lastSpawnLoc = i;
+            }
+            else
+            {
+                lastSpawnLoc = i;
+            }
+            Instantiate(enemyPrefab, spawnLocation[i].transform.position, Quaternion.identity);
+            Ecount++;
+        }
+    }
+    // Update is called once per frame
+    void Update () {
+        //StartCoroutine(SpawnEnemies());
 	}
+    
 }
