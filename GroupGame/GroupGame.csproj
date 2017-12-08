@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\LoadSceneManager.cs" />
     <Compile Include="Assets\Scripts\Main\GamePlayManager.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\SpawnControl.cs" />
     <Compile Include="Assets\Scripts\stuff.cs" />
     <Compile Include="Assets\TornadoBanditsStudio\Low Poly Free Pack\Scripts\TBS_CameraMovement.cs" />

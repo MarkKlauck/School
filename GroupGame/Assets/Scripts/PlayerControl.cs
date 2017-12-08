@@ -6,7 +6,7 @@ public class PlayerControl : MonoBehaviour {
     private float hor, ver;
 	// Use this for initialization
 	void Start () {
-		
+        
 	}
 	
 	// Update is called once per frame
@@ -16,5 +16,8 @@ public class PlayerControl : MonoBehaviour {
 
         Vector3 move = new Vector3(hor, 0.0f, ver);
         transform.Translate(move * 5.0f * Time.deltaTime);
-	}
+
+        if(Input.GetKeyDown(KeyCode.Space))
+            LoadSceneManager.Instance.LoadScene(1);
+    }
 }

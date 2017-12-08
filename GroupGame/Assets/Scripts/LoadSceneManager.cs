@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LoadSceneManager : MonoBehaviour {
 
     // Use this for initialization
-
+    public 
     public static LoadSceneManager Instance
     {
         get
@@ -18,6 +19,7 @@ public class LoadSceneManager : MonoBehaviour {
                 {
                     GameObject go = new GameObject("LoadSceneManager");
                     instance = go.AddComponent<LoadSceneManager>();
+
                 }
             }
 
@@ -57,7 +59,6 @@ public class LoadSceneManager : MonoBehaviour {
 
     public void QuitGame()
     {
-        Debug.Log("ASD");
         Application.Quit();
     }
 }
