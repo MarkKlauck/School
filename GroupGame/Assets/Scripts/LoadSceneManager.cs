@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LoadSceneManager : MonoBehaviour {
 
-    // Use this for initialization
+    public UnityEngine.UI.Image panel;
 
+    public float fade_time = 2.0f;
+    float overIntensity = 1.0f;
+    bool fade_start;
+    string nextSceneName;
+    // Use this for initialization
     public static LoadSceneManager Instance
     {
         get
@@ -18,6 +24,7 @@ public class LoadSceneManager : MonoBehaviour {
                 {
                     GameObject go = new GameObject("LoadSceneManager");
                     instance = go.AddComponent<LoadSceneManager>();
+
                 }
             }
 
@@ -41,8 +48,30 @@ public class LoadSceneManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		
-	}
+        if(fade_start)
+        {
+            overIntensity = Mathf.Min(1.0f, overIntensity + Time.deltaTime / fade_time);
+
+            if(overIntensity >= 1.0f)
+            {
+                LoadScene(nextSceneName);
+            }
+        }
+        else
+        {
+            overIntensity = Mathf.Max(0.0f, overIntensity - Time.deltaTime / fade_time);
+        }
+
+        panel.color = new Color(1, 1, 1, overIntensity);
+
+    }
+
+
+    public void LoadSceneByButton(string name)
+    {
+        fade_start = true;
+        nextSceneName = name;
+    }
 
     public void LoadScene(string name)
     {
@@ -57,7 +86,6 @@ public class LoadSceneManager : MonoBehaviour {
 
     public void QuitGame()
     {
-        Debug.Log("ASD");
         Application.Quit();
     }
 }

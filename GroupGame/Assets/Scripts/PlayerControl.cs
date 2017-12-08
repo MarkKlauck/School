@@ -7,13 +7,12 @@ public class PlayerControl : MonoBehaviour {
     private int playerNum;
 	// Use this for initialization
 	void Start () {
-        //controllers = CountControllers();
-        //Debug.Log(controllers + "\n");
-    }
+
+        
+	}
 	
 	// Update is called once per frame
 	void Update () {
-
         string axis = "Player" + playerNum + " Left Y";
         string axisx = "Player" + playerNum + " Left X";
         Vector3 movement = new Vector3(Input.GetAxis(axisx), 0.0f, -Input.GetAxis(axis));
