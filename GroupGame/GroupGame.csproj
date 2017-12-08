@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\CamControl.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameControl.cs" />
+    <Compile Include="Assets\Scripts\Intro\CameraRotating.cs" />
     <Compile Include="Assets\Scripts\LoadSceneManager.cs" />
     <Compile Include="Assets\Scripts\Main\GamePlayManager.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
