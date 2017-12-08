@@ -26,6 +26,11 @@ public class CameraRotating : MonoBehaviour {
         {
             bt.targetGraphic.CrossFadeColor(btns[selectedIndex].colors.normalColor, 0.1f, true, false);
         }
+
+        if(IsSelectButtonPressed())
+        {
+            btns[selectedIndex].onClick.Invoke();
+        }
     }
 
     private void checkButtonState()
@@ -36,12 +41,14 @@ public class CameraRotating : MonoBehaviour {
         }
         else if (Input.GetAxis("Player1 Dpad Y") > 0.0f)
         {
-            selectedIndex = Mathf.Max(btns.Length - 1, --selectedIndex);
+            selectedIndex = Mathf.Max(0, --selectedIndex);
         }
+
     }
 
     private bool IsSelectButtonPressed()
     {
+        //return Input.GetKey(KeyCode.Return);
         return (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Joystick1Button7));
     }
 }
