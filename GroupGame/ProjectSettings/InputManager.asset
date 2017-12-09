@@ -337,7 +337,7 @@ InputManager:
     dead: 0.1
     sensitivity: 1
     snap: 0
-    invert: 0
+    invert: 1
     type: 2
     axis: 3
     joyNum: 2
@@ -353,7 +353,7 @@ InputManager:
     dead: 0.1
     sensitivity: 1
     snap: 0
-    invert: 0
+    invert: 1
     type: 2
     axis: 3
     joyNum: 1
@@ -390,7 +390,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Player1 Dpad X
+    m_Name: Player3 Rightx
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -401,12 +401,12 @@ InputManager:
     dead: 0.1
     sensitivity: 1
     snap: 0
-    invert: 0
+    invert: 1
     type: 2
-    axis: 5
-    joyNum: 1
+    axis: 3
+    joyNum: 4
   - serializedVersion: 3
-    m_Name: Player1 Dpad Y
+    m_Name: Player3 Left Y
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -419,5 +419,69 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 6
-    joyNum: 1
+    axis: 1
+    joyNum: 4
+  - serializedVersion: 3
+    m_Name: Player3 Left X
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1
+    dead: 0.1
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 4
+  - serializedVersion: 3
+    m_Name: Player4 Rightx
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1
+    dead: 0.1
+    sensitivity: 1
+    snap: 0
+    invert: 1
+    type: 2
+    axis: 3
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: Player4 Left Y
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1
+    dead: 0.1
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 1
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: Player4 Left X
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1
+    dead: 0.1
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 0
+    joyNum: 3
