@@ -5,30 +5,43 @@ using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour
 {
-    public int players;
+    private int players;
     public Text[] plyrScore;
     public Rect[] camPos;
     public GameObject[] allPlayers;
     public GameObject[] plyrSpawns;
 	// Use this for initialization
 	void Awake () {
+        Debug.Log("GameControl Awake Called");
         plyrScore[0].enabled = false;
         plyrScore[1].enabled = false;
         plyrScore[2].enabled = false;
         plyrScore[3].enabled = false;
+        SetPlayerCount();
         SetScoreHUD();
-        //SetPlayers();
         SetGame();
-        /*
-		allPlayers = GameObject.FindGameObjectsWithTag("Player");
-        Debug.Log(allPlayers.Length);*/
         
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+        Debug.Log("GameControl start Called");
+
+        if (players == 0)
+        {
+            SetPlayerCount();
+            SetScoreHUD();
+            SetGame();
+        }
+    }
+    // Update is called once per frame
+    void Update () {
+        if (players == 0)
+        {
+            SetPlayerCount();
+            SetScoreHUD();
+            SetGame();
+        }
+    }
 
     public void SetGame()
     {
@@ -68,6 +81,12 @@ public class GameControl : MonoBehaviour
         }
     }
 
+    public void SetPlayerCount()
+    {
+        players = PlayerPrefs.GetInt("PlayerCount");
+    }
+
+    #region game setupstuff
     void SetScoreHUD()
     {
         if(players == 1)
@@ -120,17 +139,6 @@ public class GameControl : MonoBehaviour
             }
         }
     }
-    /*
-    public void SetPlayers()
-    {
-        int i = 1;
-        for(int a = 0;a<players;a++)
-        {
-            Debug.Log(i);
-            PlayerControl pc = allPlayers[a].GetComponent<PlayerControl>();
-            pc.SetPlayerNumber(i);
-            Debug.Log(pc.GetPlayerNumber());
-            i++;
-        }
-    }*/
+#endregion
+    
 }
