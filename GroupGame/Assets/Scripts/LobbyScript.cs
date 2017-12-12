@@ -15,7 +15,7 @@ public class LobbyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
     public void SetScene()
@@ -39,6 +39,7 @@ public class LobbyScript : MonoBehaviour {
     public void AddPlayer()
     {
         playerNum++;
+        PlayerPrefs.SetInt("PlayerCount", playerNum);
         Debug.Log(playerNum);
     }
 }
