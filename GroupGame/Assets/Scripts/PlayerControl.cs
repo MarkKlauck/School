@@ -5,21 +5,30 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour {
     private int controllers;
     private int playerNum;
-	// Use this for initialization
-	void Start () {
+    string axis;
+    string axisx;
+    // Use this for initialization
+    void Start () {
+        playerNum = GetPlayerNumber();
+        axis = "Player" + playerNum + " Left Y";
+        axisx = "Player" + playerNum + " Left X";
 
-        
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        string axis = "Player" + playerNum + " Left Y";
-        string axisx = "Player" + playerNum + " Left X";
+        if(playerNum == 0)
+        {
+            playerNum = GetPlayerNumber();
+            axis = "Player" + playerNum + " Left Y";
+            axisx = "Player" + playerNum + " Left X";
+
+        }
         Vector3 movement = new Vector3(Input.GetAxis(axisx), 0.0f, -Input.GetAxis(axis));
         transform.Translate(movement * 5.0f * Time.deltaTime);
 
-        /* for debugging controller input
-        for (int i = 1; i <= 16; i++)
+        #region for debugging controller input
+        /*for (int i = 1; i <= 16; i++)
         {
             string key = "joystick " + i + " button " + 0;
             for (int j = 0; j < 20; j++)
@@ -31,6 +40,8 @@ public class PlayerControl : MonoBehaviour {
                 }
             }
         }*/
+        #endregion
+
     }
 
     public int GetPlayerNumber()

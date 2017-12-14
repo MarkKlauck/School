@@ -12,7 +12,7 @@ public class GameControl : MonoBehaviour
     public GameObject[] plyrSpawns;
 	// Use this for initialization
 	void Awake () {
-        Debug.Log("GameControl Awake Called");
+        //Debug.Log("GameControl Awake Called");
         plyrScore[0].enabled = false;
         plyrScore[1].enabled = false;
         plyrScore[2].enabled = false;
@@ -24,23 +24,23 @@ public class GameControl : MonoBehaviour
     }
     void Start()
     {
-        Debug.Log("GameControl start Called");
+        //Debug.Log("GameControl start Called");
 
-        if (players == 0)
+       /* if (players == 0)
         {
             SetPlayerCount();
             SetScoreHUD();
             SetGame();
-        }
+        }*/
     }
     // Update is called once per frame
     void Update () {
-        if (players == 0)
+        /*if (players == 0)
         {
             SetPlayerCount();
             SetScoreHUD();
             SetGame();
-        }
+        }*/
     }
 
     public void SetGame()
