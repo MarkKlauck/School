@@ -4,18 +4,50 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class LobbyScript : MonoBehaviour {
-    public Image[] images;
+    //public Image[] images;
     public Button[] buttons;
+    public Image imgPrefab;
+    //public Button btnPrefab;
 
-    private int playerNum = 0;
+    private int playerNum = 1;
+
+    private float newWidth = Screen.width / 2 - 10;
+    private float newHeight = Screen.height / 2 - 10;
+    private List<int> nums;
     // Use this for initialization
     void Start () {
+        PlayerPrefs.SetInt("player1", 0);
+        nums = new List<int> {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
         SetScene();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+        // need to configure input manager to reflect player joy number
+        // modify cam script to take player joy number instead of player number
+
+        for (int i = 0; i < nums.Count; i++)
+        {
+            string key = "joystick " + nums[i] + " button " + 0;
+            if (Input.GetKeyDown(key))
+            {
+                string name = "player" + playerNum;
+                PlayerPrefs.SetInt(name, nums[i]);
+                nums.RemoveAt(i);
+                buttons[playerNum - 1].gameObject.SetActive(false);
+                AddPlayer();
+                break;
+            }
+        }
+        if (PlayerPrefs.GetInt("player1") != 0)
+        {
+            if (Input.GetKey("joystick 1 button 7"))
+            {
+                LoadSceneManager lsm = GameObject.Find("start game").GetComponent<LoadSceneManager>();
+                lsm.LoadSceneByButton("Main");
+            }
+        }
 	}
 
     public void SetScene()
@@ -27,19 +59,20 @@ public class LobbyScript : MonoBehaviour {
             new Vector2(0, 0),
             new Vector2(Screen.width/2, 0),
         };
-        for(int i = 0;i<4;i++)
+        for (int i = 0;i<4;i++)
         {
-            float newWidth = Screen.width / 2 - 10;
-            float newHeight = Screen.height / 2 - 10;
-            images[i].rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
-            images[i].rectTransform.anchoredPosition = bkgLoc[i];
+            GameObject canv = GameObject.Find("Canvas");
+            Image img = Instantiate(imgPrefab, bkgLoc[i], Quaternion.identity) as Image;
+            img.transform.parent = GameObject.Find("BKGPanels").transform;
+            img.rectTransform.sizeDelta = new Vector2(newWidth, newHeight);
+            img.rectTransform.anchoredPosition = bkgLoc[i];
+            buttons[i].gameObject.SetActive(true);
         }
     }
 
     public void AddPlayer()
     {
-        playerNum++;
         PlayerPrefs.SetInt("PlayerCount", playerNum);
-        Debug.Log(playerNum);
+        playerNum++;
     }
 }
