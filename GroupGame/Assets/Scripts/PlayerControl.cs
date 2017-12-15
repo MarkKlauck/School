@@ -23,13 +23,17 @@ public class PlayerControl : MonoBehaviour {
     void Update () {
         if(Input.GetAxis(axisx) != 0 || Input.GetAxis(axis) != 0)
         {
-            anim.SetBool("Moving", true);
-            anim.SetBool("Running", true);
+            //anim.SetBool("Moving", true);
+            //anim.SetBool("Running", true);
         }
         else
         {
-            anim.SetBool("Moving", false);
-            anim.SetBool("Running", false);
+            //anim.SetBool("Moving", false);
+            //anim.SetBool("Running", false);
+        }
+        if(Input.GetKeyDown("joystick " + joyNum + " button 2"))
+        {
+            anim.SetTrigger("Attack1Trigger");
         }
         Vector3 movement = new Vector3(Input.GetAxis(axisx), 0.0f, -Input.GetAxis(axis));
         transform.Translate(movement * 10.0f * Time.deltaTime);

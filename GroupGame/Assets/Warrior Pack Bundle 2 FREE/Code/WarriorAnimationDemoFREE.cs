@@ -101,7 +101,7 @@ public class WarriorAnimationDemoFREE : MonoBehaviour
 		GetCameraRelativeMovement();  
 	}
 
-	void OnGUI () 
+	/*void OnGUI () 
 	{
 		if (GUI.Button (new Rect (25, 85, 100, 30), "Attack1")) 
 		{
@@ -112,5 +112,5 @@ public class WarriorAnimationDemoFREE : MonoBehaviour
 			else
 				StartCoroutine (COStunPause(.6f));
 		}
-	}
+	}*/
 }
