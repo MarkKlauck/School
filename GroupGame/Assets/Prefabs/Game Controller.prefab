@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1663145616654352}
+  m_IsPrefabParent: 1
+--- !u!1 &1663145616654352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4695474452339756}
+  - component: {fileID: 114726293704157918}
+  m_Layer: 0
+  m_Name: Game Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4695474452339756
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663145616654352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114726293704157918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663145616654352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c03c2d2e5557404da4f1ef222223fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plyrScore:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  camPos:
+  - serializedVersion: 2
+    x: 0
+    y: 0.5
+    width: 0.499
+    height: 0.499
+  - serializedVersion: 2
+    x: 0.5
+    y: 0.5
+    width: 0.499
+    height: 0.499
+  - serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0.499
+    height: 0.499
+  - serializedVersion: 2
+    x: 0.5
+    y: 0
+    width: 0.499
+    height: 0.499
+  allPlayers:
+  - {fileID: 1966968835539506, guid: 9d4936c075a2ce047a91f49ae950376d, type: 2}
+  - {fileID: 1372556140353152, guid: 189067410bb0fa449b9da71f24f7583f, type: 2}
+  - {fileID: 1039016491665526, guid: 4a9b54c242965e143a09807132c909f5, type: 2}
+  - {fileID: 1602483875723502, guid: 58c87217cb74bce49bda52cb4d5c322b, type: 2}
+  plyrSpawns:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

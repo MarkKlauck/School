@@ -6,17 +6,14 @@ public class CamControl : MonoBehaviour {
     private float yOffset;
 
     private Transform target;
-    private int plyrNum;
+    private int joyNum;
     private string joy;
 	// Use this for initialization
 	void Start () {
         target = gameObject.transform.parent.GetComponentInParent<Transform>();
         yOffset = 1.5f;
-        plyrNum = GetPlayerNumber();
-        joy = "Player" + plyrNum + " Rightx";
-        
-       // Debug.Log(target.gameObject.name);
-       // Debug.Log(joy);
+        joyNum = GetJoyNumber();
+        joy = "Player" + joyNum + " Rightx"; //need to add input manager
 	}
 	
 	// Update is called once per frame
@@ -30,9 +27,9 @@ public class CamControl : MonoBehaviour {
         transform.LookAt(target.position + new Vector3(0, yOffset, 0));
 	}
 
-    public int GetPlayerNumber()
+    public int GetJoyNumber()
     {
         PlayerControl pc = gameObject.transform.parent.GetComponentInParent<PlayerControl>();
-        return pc.GetPlayerNumber();
+        return pc.GetJoystickNumber();
     }
 }

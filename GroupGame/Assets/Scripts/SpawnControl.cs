@@ -37,6 +37,7 @@ public class SpawnControl : MonoBehaviour {
                 lastSpawnLoc = i;
             }
             Instantiate(enemyPrefab, spawnLocation[i].transform.position, Quaternion.identity);
+            o--;
             Ecount++;
         }
     }
