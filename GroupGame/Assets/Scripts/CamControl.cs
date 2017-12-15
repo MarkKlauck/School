@@ -13,7 +13,7 @@ public class CamControl : MonoBehaviour {
         target = gameObject.transform.parent.GetComponentInParent<Transform>();
         yOffset = 1.5f;
         joyNum = GetJoyNumber();
-        joy = "Player" + joyNum + " Rightx"; //need to add input manager
+        joy = "Joystick" + joyNum + " Rightx";
 	}
 	
 	// Update is called once per frame
