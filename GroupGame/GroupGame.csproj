@@ -95,6 +95,9 @@
     <Compile Include="Assets\Scripts\stuff.cs" />
     <Compile Include="Assets\TornadoBanditsStudio\Low Poly Free Pack\Scripts\TBS_CameraMovement.cs" />
     <Compile Include="Assets\TornadoBanditsStudio\Low Poly Free Pack\Water\TBS_Water.cs" />
+    <Compile Include="Assets\Warrior Pack Bundle 2 FREE\Code\IKHands.cs" />
+    <Compile Include="Assets\Warrior Pack Bundle 2 FREE\Code\SmoothFollow.cs" />
+    <Compile Include="Assets\Warrior Pack Bundle 2 FREE\Code\WarriorAnimationDemoFREE.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\read me.txt" />

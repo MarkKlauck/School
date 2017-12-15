@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
+    private Animator anim;
     private int controllers;
     private int playerNum;
     private int joyNum;
@@ -10,6 +11,7 @@ public class PlayerControl : MonoBehaviour {
     string axisx;
     // Use this for initialization
     void Start () {
+        anim = GetComponent<Animator>();
         //playerNum = GetPlayerNumber();
         joyNum = GetJoystickNumber();
         axis = "Joystick" + joyNum + " Lefty";
@@ -19,8 +21,22 @@ public class PlayerControl : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if(Input.GetAxis(axisx) != 0 || Input.GetAxis(axis) != 0)
+        {
+            //anim.SetBool("Moving", true);
+            //anim.SetBool("Running", true);
+        }
+        else
+        {
+            //anim.SetBool("Moving", false);
+            //anim.SetBool("Running", false);
+        }
+        if(Input.GetKeyDown("joystick " + joyNum + " button 2"))
+        {
+            anim.SetTrigger("Attack1Trigger");
+        }
         Vector3 movement = new Vector3(Input.GetAxis(axisx), 0.0f, -Input.GetAxis(axis));
-        transform.Translate(movement * 5.0f * Time.deltaTime);
+        transform.Translate(movement * 10.0f * Time.deltaTime);
 
         #region for debugging controller input
         /*for (int i = 1; i <= 16; i++)
