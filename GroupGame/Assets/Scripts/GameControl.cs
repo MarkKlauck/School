@@ -32,7 +32,7 @@ public class GameControl : MonoBehaviour
     {
         if (players == 1)
         {
-            GameObject currentPlayer = Instantiate(allPlayers[1], plyrSpawns[1].transform.position, Quaternion.identity) as GameObject;
+            GameObject currentPlayer = Instantiate(allPlayers[0], plyrSpawns[0].transform.position, Quaternion.identity) as GameObject;
             PlayerControl pc = currentPlayer.GetComponent<PlayerControl>();
             pc.SetPlayerNumber(1);
         }

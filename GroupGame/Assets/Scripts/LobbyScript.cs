@@ -17,7 +17,7 @@ public class LobbyScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
         PlayerPrefs.SetInt("player1", 0);
-        nums = new List<int> {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+        nums = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, };// 12, 13, 14, 15, 16 };
         SetScene();
 	}
 	
@@ -42,7 +42,7 @@ public class LobbyScript : MonoBehaviour {
         }
         if (PlayerPrefs.GetInt("player1") != 0)
         {
-            if (Input.GetKey("joystick 1 button 7"))
+            if (Input.GetKey("joystick "+ PlayerPrefs.GetInt("player1") + " button 7"))
             {
                 LoadSceneManager lsm = GameObject.Find("start game").GetComponent<LoadSceneManager>();
                 lsm.LoadSceneByButton("Main");
