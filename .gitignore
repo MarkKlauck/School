@@ -1,15 +1,31 @@
-Blank Tester Group Project/Library/
+# =============== #
+# Unity generated #
+# =============== #
 GroupGame/Temp/
 GroupGame/Library/
-Captain Blaster/Library/metadata/4c/4c6fe94acbb24417c988bab18cbd5209
-*.info
-Captain Blaster/
-customController/
-DA/
-GoWtactics/GoWtactics.csproj
-GoWtactics/
-importpackagestuff/
-newProject/
-GroupGame/.vs/
-GroupGame/Library/
-pb&j/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+GroupGame/ExportedObj/
+GroupGame/obj/
+GroupGame/*.svd
+GroupGame/*.userprefs
+GroupGame/*.csproj
+GroupGame/*.pidb
+GroupGame/*.suo
+GroupGame/*.sln
+GroupGame/*.user
+GroupGame/*.unityproj
+GroupGame/*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+GroupGame/.DS_Store
+GroupGame/.DS_Store?
+GroupGame/._*
+GroupGame/.Spotlight-V100
+GroupGame/.Trashes
+GroupGame/ehthumbs.db
+GroupGame/Thumbs.db
