@@ -2880,6 +2880,7 @@ CanvasRenderer:
   m_ObjectHideFlags: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 159898680}
@@ -3013,10 +3014,13 @@ CanvasRenderer:
 >>>>>>> parent of cc66dab... More Enviroment Stuff added. Desert area and mountain added.
 =======
 >>>>>>> parent of cc66dab... More Enviroment Stuff added. Desert area and mountain added.
+=======
+>>>>>>> parent of cc66dab... More Enviroment Stuff added. Desert area and mountain added.
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1068691937}
 --- !u!4 &1069798473 stripped
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 Transform:
@@ -3032,6 +3036,8 @@ Transform:
   m_PrefabInternal: {fileID: 1444129521}
 --- !u!4 &1149233145 stripped
 >>>>>>> 1847e1f9d9cfc3559dd777c23966e2069cb1901c
+=======
+>>>>>>> parent of cc66dab... More Enviroment Stuff added. Desert area and mountain added.
 =======
 >>>>>>> parent of cc66dab... More Enviroment Stuff added. Desert area and mountain added.
 =======
