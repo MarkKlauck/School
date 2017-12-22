@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 18675406}
   - component: {fileID: 18675405}
   m_Layer: 0
-  m_Name: PlayerTemplate 1 (1)
+  m_Name: PlayerTemplate 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ Animator:
   m_GameObject: {fileID: 18675403}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 781a15e490c144941adf6440cf6b6cdd, type: 3}
-  m_Controller: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 415f40b8845ee1c46b83eddd0ce365a6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -507,11 +507,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 50198895}
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1538,7 +1538,7 @@ GameObject:
   - component: {fileID: 345628326}
   - component: {fileID: 345628325}
   m_Layer: 0
-  m_Name: PlayerTemplate 1 (2)
+  m_Name: PlayerTemplate 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1646,7 +1646,7 @@ Animator:
   m_GameObject: {fileID: 345628323}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 781a15e490c144941adf6440cf6b6cdd, type: 3}
-  m_Controller: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 415f40b8845ee1c46b83eddd0ce365a6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2021,6 +2021,12 @@ Transform:
   m_Father: {fileID: 814526848}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &476605458 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114446198978181788, guid: 846f9d0d6ced4fa4089e27cf24402c76,
+    type: 2}
+  m_PrefabInternal: {fileID: 530273304}
+  m_Script: {fileID: 11500000, guid: 8c72c3d6e6fe9a64c8b7cfd74b1dc63c, type: 3}
 --- !u!1 &477764948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,6 +2563,21 @@ Prefab:
     - target: {fileID: 1845603521419094, guid: 846f9d0d6ced4fa4089e27cf24402c76, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114852902733850910, guid: 846f9d0d6ced4fa4089e27cf24402c76,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 476605458}
+    - target: {fileID: 114852902733850910, guid: 846f9d0d6ced4fa4089e27cf24402c76,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 114852902733850910, guid: 846f9d0d6ced4fa4089e27cf24402c76,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 846f9d0d6ced4fa4089e27cf24402c76, type: 2}
@@ -3528,11 +3549,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 759172304}
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7305,7 +7326,7 @@ GameObject:
   - component: {fileID: 1488704411}
   - component: {fileID: 1488704410}
   m_Layer: 0
-  m_Name: PlayerTemplate 1 (3)
+  m_Name: PlayerTemplate 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7413,7 +7434,7 @@ Animator:
   m_GameObject: {fileID: 1488704408}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 781a15e490c144941adf6440cf6b6cdd, type: 3}
-  m_Controller: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 415f40b8845ee1c46b83eddd0ce365a6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -10010,6 +10031,11 @@ MonoBehaviour:
   - {fileID: 1620763295}
   - {fileID: 1206751570}
   - {fileID: 746628351}
+  characters:
+  - {fileID: 242380423}
+  - {fileID: 18675403}
+  - {fileID: 345628323}
+  - {fileID: 1488704408}
 --- !u!4 &1954020105
 Transform:
   m_ObjectHideFlags: 0
@@ -10634,11 +10660,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2095083057}
         m_MethodName: OnClick
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
