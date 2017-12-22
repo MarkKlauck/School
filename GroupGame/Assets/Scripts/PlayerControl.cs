@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
+    public float moveSpeed;
+
     private Animator anim;
     private int controllers;
     private int playerNum;
@@ -36,7 +38,7 @@ public class PlayerControl : MonoBehaviour {
             anim.SetTrigger("Attack1Trigger");
         }
         Vector3 movement = new Vector3(Input.GetAxis(axisx), 0.0f, -Input.GetAxis(axis));
-        transform.Translate(movement * 10.0f * Time.deltaTime);
+        transform.Translate(movement * Time.deltaTime * moveSpeed);
 
         #region for debugging controller input
         /*for (int i = 1; i <= 16; i++)
