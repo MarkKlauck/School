@@ -38,7 +38,7 @@ public class WarriorAnimationDemoFREE : MonoBehaviour
 			animator.SetBool("Moving", false);
 			animator.SetBool("Running", false);
 		}
-
+        /*
 		if (Input.GetButtonDown("Fire1"))
 		{
 			animator.SetTrigger("Attack1Trigger");
@@ -49,7 +49,7 @@ public class WarriorAnimationDemoFREE : MonoBehaviour
 			else
 				StartCoroutine (COStunPause(.6f));
 		}
-
+        */
 		UpdateMovement();  //update character position and facing
 	}
 

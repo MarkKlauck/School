@@ -9,8 +9,8 @@ public class PlayerControl : MonoBehaviour {
     private int controllers;
     private int playerNum;
     private int joyNum;
-    string axis;
-    string axisx;
+    public string axis;
+    public string axisx;
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
@@ -33,9 +33,21 @@ public class PlayerControl : MonoBehaviour {
             //anim.SetBool("Moving", false);
             //anim.SetBool("Running", false);
         }
-        if(Input.GetKeyDown("joystick " + joyNum + " button 2"))
+        if(Input.GetKeyDown("joystick " + joyNum + " button 2"))// && anim.GetCurrentAnimatorStateInfo(0).
         {
-            anim.SetTrigger("Attack1Trigger");
+            int r = Random.Range(0, 3);
+            if(r == 0)
+            {
+                anim.SetTrigger("IsLightAttack");
+            }
+            else if (r == 1)
+            {
+                anim.SetTrigger("IsLightAttack2");
+            }
+            else if (r == 2)
+            {
+                anim.SetTrigger("IsLightAttack3");
+            }
         }
         Vector3 movement = new Vector3(Input.GetAxis(axisx), 0.0f, -Input.GetAxis(axis));
         transform.Translate(movement * Time.deltaTime * moveSpeed);
