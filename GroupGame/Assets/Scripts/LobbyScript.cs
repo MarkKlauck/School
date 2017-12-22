@@ -11,6 +11,7 @@ public class LobbyScript : MonoBehaviour
     //public Button btnPrefab;
 
     public Camera[] character_cams;
+    public GameObject[] characters;
     private int playerNum = 1;
 
     private float newWidth = Screen.width / 2 - 10;
@@ -40,7 +41,7 @@ public class LobbyScript : MonoBehaviour
                 PlayerPrefs.SetInt(name, nums[i]);
                 nums.RemoveAt(i);
                 buttons[playerNum - 1].gameObject.SetActive(false);
-                AddPlayer();
+                AddPlayer(i);
                 break;
             }
         }
@@ -81,9 +82,11 @@ public class LobbyScript : MonoBehaviour
         }
     }
 
-    public void AddPlayer()
+    public void AddPlayer(int character_index)
     {
         PlayerPrefs.SetInt("PlayerCount", playerNum);
         playerNum++;
+
+        characters[character_index].GetComponent<Animator>().SetTrigger("Select");
     }
 }

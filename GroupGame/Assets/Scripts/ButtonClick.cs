@@ -14,9 +14,9 @@ public class ButtonClick : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void OnClick()
+    public void OnClick(int index)
     {
-        lb.AddPlayer();
+        lb.AddPlayer(index);
         gameObject.SetActive(false);
     }
 }
