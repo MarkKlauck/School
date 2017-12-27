@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
 
+    private int hp = 5;
     private NavMeshAgent agent;
     private Transform target;
 	// Use this for initialization
@@ -25,9 +26,16 @@ public class Enemy : MonoBehaviour {
         {
             FindTarget();
         }
-        
+        if(hp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
 	}
 
+    public void TakeDamage(int amount)
+    {
+        hp -= amount;
+    }
     void FindTarget()
     {
         GameObject[] allPlayers = GameObject.FindGameObjectsWithTag("Player");
