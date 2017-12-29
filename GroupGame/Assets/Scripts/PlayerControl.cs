@@ -18,6 +18,7 @@ public class PlayerControl : MonoBehaviour {
     private float delay = 1.0f;
     private float lightDelay = 0.6f;
     private bool isAttacking = false;
+
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
@@ -30,7 +31,7 @@ public class PlayerControl : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
+        
         AttackEvents();
 
         #region for debugging controller input
@@ -90,7 +91,7 @@ public class PlayerControl : MonoBehaviour {
     {
         return isAttacking;
     }
-
+    
     private void AttackEvents()
     {
         if (Input.GetKeyDown("joystick " + joyNum + " button 2") && Time.time > nextLight)// && anim.GetCurrentAnimatorStateInfo(0).
