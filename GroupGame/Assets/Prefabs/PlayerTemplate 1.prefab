@@ -35,6 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4548774164897086}
   - component: {fileID: 136522120081554294}
+  - component: {fileID: 114130260578031876}
   m_Layer: 2
   m_Name: KickLeft
   m_TagString: Untagged
@@ -1099,7 +1100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1688117508104094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 345.1784, y: 0, z: 222.87642}
+  m_LocalPosition: {x: 269.3454, y: 0, z: 262.266}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4158538004731372}
@@ -2149,6 +2150,18 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
+--- !u!114 &114130260578031876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1039669380040086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d0caaeb4d63ef489f4a00092f0b38e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1688117508104094}
 --- !u!114 &114392312424484476
 MonoBehaviour:
   m_ObjectHideFlags: 1
