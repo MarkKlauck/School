@@ -26,7 +26,6 @@ public class PlayerControl : MonoBehaviour {
         joyNum = GetJoystickNumber();
         axis = "Joystick" + joyNum + " Lefty";
         axisx = "Joystick" + joyNum + " Leftx";
-
     }
 
     // Update is called once per frame
