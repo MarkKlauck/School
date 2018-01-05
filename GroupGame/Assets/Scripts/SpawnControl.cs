@@ -15,7 +15,7 @@ public class SpawnControl : MonoBehaviour {
     }
     IEnumerator SpawnEnemies()
     {
-        int n = spawnLocation.Length - 1;
+        int n = spawnLocation.Length;
         int o = 30;
         int Ecount = 4;
         int lastSpawnLoc = 0;
@@ -23,10 +23,11 @@ public class SpawnControl : MonoBehaviour {
         {
             yield return new WaitForSeconds(3);
             int i = Random.Range(0, n);
+            Debug.Log(i);
             if(i == lastSpawnLoc)
             {
                 i++;
-                if(i>n)
+                if(i==n)
                 {
                     i = 0;
                 }

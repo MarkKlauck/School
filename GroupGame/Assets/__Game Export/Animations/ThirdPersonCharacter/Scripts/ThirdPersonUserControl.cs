@@ -14,7 +14,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
         Animator anim;
         private bool IsLightAttack = false;
-
+        private string playerX, playerY;
 
         private void Start()
         {
@@ -25,15 +25,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 m_Cam = Camera.main.transform;
             }
-            else
-            {
-                Debug.LogWarning(
-                    "Warning: no main camera found. Third person character needs a Camera tagged \"MainCamera\", for camera-relative controls.", gameObject);
-                // we use self-relative controls in this case, which probably isn't what the user wants, but hey, we warned them!
-            }
 
             // get the third person character ( this should never be null due to require component )
             m_Character = GetComponent<ThirdPersonCharacter>();
+            playerX = gameObject.GetComponent<PlayerControl>().GetControllerAxis('x');
+            playerY = gameObject.GetComponent<PlayerControl>().GetControllerAxis('y');
         }
 
 
@@ -43,7 +39,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             if (!m_Jump)
             {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+                m_Jump = GetComponent<PlayerControl>().Jump(); //CrossPlatformInputManager.GetButtonDown("Jump");
             }
         }
 
@@ -52,8 +48,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void FixedUpdate()
         {
             // read inputs
-            float h = Input.GetAxis(gameObject.GetComponent<PlayerControl>().axisx);//CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = Input.GetAxis(gameObject.GetComponent<PlayerControl>().axis); //CrossPlatformInputManager.GetAxis("Vertical");
+            float h = Input.GetAxis(playerX);//CrossPlatformInputManager.GetAxis("Horizontal");
+            float v = Input.GetAxis(playerY); //CrossPlatformInputManager.GetAxis("Vertical");
             if(v <0)
             {
                 v = 0;

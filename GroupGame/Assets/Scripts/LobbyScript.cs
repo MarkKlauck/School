@@ -42,6 +42,7 @@ public class LobbyScript : MonoBehaviour
                 nums.RemoveAt(i);
                 buttons[playerNum - 1].gameObject.SetActive(false);
                 AddPlayer(i);
+                i = 0;
                 break;
             }
         }
