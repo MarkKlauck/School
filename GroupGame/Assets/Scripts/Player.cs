@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     private int hp, maxhp, damage;
-
+    //public Camera Cam;
     //collision stuff here?
 
     // Use this for initialization
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+      //  CamDelay();
     }
     //use to set hp to a specified amount
     public void SetHp(int amnt)
@@ -48,4 +48,16 @@ public class Player : MonoBehaviour {
     {
         damage = amnt;
     }
+
+   /* void CamDelay()
+    {
+       // Camera Cam = GetComponentInChildren<Camera>();
+        Debug.Log(Cam.gameObject.name);
+        Vector3 MoveCamTo = transform.position - transform.forward * 15f + Vector3.up * 20f;
+        float bias = 0.97f;
+        Cam.transform.position = Cam.transform.position * bias +
+                                         MoveCamTo * (1.0f - bias);
+        Cam.transform.LookAt(transform.position + transform.forward * 25f);
+    }
+    */
 }
