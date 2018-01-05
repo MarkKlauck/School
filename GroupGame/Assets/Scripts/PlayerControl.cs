@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour {
     public float moveSpeed;
     public GameObject sword, foot;
-
+    public AudioClip[] audioClips;
 
     private int light = 0;
     private int heavy = 0;
@@ -13,14 +13,15 @@ public class PlayerControl : MonoBehaviour {
     private int controllers;
     private int playerNum;
     private int joyNum;
-    public string axis;
-    public string axisx;
+    private string axis = "";
+    private string axisx = "";
     private float nextClick = 0.0f;
     private float nextLight = 0.0f;
     private float delay = 1.0f;
     private float lightDelay = 0.6f;
     private bool isAttacking = false;
     private int hitCount = 0;
+    private bool isJumping = false;
 
     // Use this for initialization
     void Start () {
@@ -65,6 +66,26 @@ public class PlayerControl : MonoBehaviour {
     public int GetJoystickNumber()
     {
         return PlayerPrefs.GetInt("player" + playerNum);
+    }
+
+    public string GetControllerAxis(char a)
+    {
+        if(axis == "" || axis == "")
+        {
+            joyNum = GetJoystickNumber();
+            axis = "Joystick" + joyNum + " Lefty";
+            axisx = "Joystick" + joyNum + " Leftx";
+        }
+
+        if(a == 'x')
+        {
+            return axisx;
+            Debug.Log(axisx + "\n" + axis);
+        }
+        else
+        {
+            return axis;
+        }
     }
 
     private int CountControllers()
@@ -208,5 +229,18 @@ public class PlayerControl : MonoBehaviour {
             nextLight = Time.time + lightDelay;
 
         }
+        if(Input.GetKeyDown("joystick " + joyNum + " button 0"))
+        {
+            isJumping = true;
+        }
+        else
+        {
+            isJumping = false;
+        }
+    }
+
+    public bool Jump()
+    {
+        return isJumping;
     }
 }
