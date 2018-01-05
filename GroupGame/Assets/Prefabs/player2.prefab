@@ -338,6 +338,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4700185218847506}
+  - component: {fileID: 114958627462225876}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -2179,6 +2180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
+  sword: {fileID: 0}
+  foot: {fileID: 0}
   axis: 
   axisx: 
 --- !u!114 &114686142693429762
@@ -2240,6 +2243,21 @@ MonoBehaviour:
   visualiseInEditor: 1
   closestDistance: 0.5
   dontClipTag: Player
+--- !u!114 &114958627462225876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337741216770456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edddcc223b1ccd94885ecdf9de5dc2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_cameraShake: 0
+  default_shake_duration: 1
+  shake_amount: 0.7
+  decrease_factor: 1
 --- !u!124 &124961141363006552
 Behaviour:
   m_ObjectHideFlags: 1

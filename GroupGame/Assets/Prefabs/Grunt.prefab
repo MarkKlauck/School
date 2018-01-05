@@ -1617,6 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50946ef8166370b479b123d94acf6caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PickupItem: {fileID: 1995210005914048, guid: 337ec35b7afa73e4da7bf07320f0097e, type: 2}
 --- !u!136 &136422731206473288
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1639,7 +1640,6 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -1655,7 +1655,6 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
