@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     private int hp, maxhp, damage;
 
+    
+
     //collision stuff here?
 
     // Use this for initialization
