@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
     public float moveSpeed;
+    public GameObject sword, foot;
+
 
     private int light = 0;
     private int heavy = 0;
@@ -18,6 +20,7 @@ public class PlayerControl : MonoBehaviour {
     private float delay = 1.0f;
     private float lightDelay = 0.6f;
     private bool isAttacking = false;
+    private int hitCount = 0;
 
     // Use this for initialization
     void Start () {
@@ -86,6 +89,13 @@ public class PlayerControl : MonoBehaviour {
         isAttacking = false;
     }
 
+    IEnumerator AttackDelay(float attackdelay, GameObject collider)
+    {
+        yield return new WaitForSeconds(attackdelay);
+        collider.SetActive(false);
+        isAttacking = false;
+    }
+
     public bool IsAttacking()
     {
         return isAttacking;
@@ -101,47 +111,27 @@ public class PlayerControl : MonoBehaviour {
                     {
                         anim.SetTrigger("IsLightAttack");
                         isAttacking = true;
-                        StartCoroutine(AttackDelay(lightDelay));
+                        sword.SetActive(true);
+                        StartCoroutine(AttackDelay(lightDelay, sword));
                         break;
                     }
                 case 1:
                     {
                         anim.SetTrigger("IsLightAttack3");
                         isAttacking = true;
-                        StartCoroutine(AttackDelay(lightDelay));
+                        sword.SetActive(true);
+                        StartCoroutine(AttackDelay(lightDelay, foot));
                         break;
                     }
                 case 2:
                     {
                         anim.SetTrigger("IsLightAttack2");
                         isAttacking = true;
-                        StartCoroutine(AttackDelay(lightDelay));
+                        sword.SetActive(true);
+                        StartCoroutine(AttackDelay(lightDelay, sword));
                         break;
                     }
             }
-            /*
-            int r = Random.Range(0, 3);
-            if (r == 0)
-            {
-                anim.SetTrigger("IsLightAttack");
-                isAttacking = true;
-                StartCoroutine(AttackDelay(lightDelay));
-            }
-            else if (r == 1)
-            {
-                anim.SetTrigger("IsLightAttack2");
-                isAttacking = true;
-                StartCoroutine(AttackDelay(lightDelay));
-
-            }
-            else if (r == 2)
-            {
-                anim.SetTrigger("IsLightAttack3");
-                isAttacking = true;
-                StartCoroutine(AttackDelay(lightDelay));
-
-
-            }*/
             if(light == 2)
             {
                 light = 0;

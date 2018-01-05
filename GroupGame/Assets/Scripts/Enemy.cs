@@ -11,6 +11,9 @@ public class Enemy : MonoBehaviour {
     private Transform target;
     private Animator e_anim;
     private int attack = 0;
+    private float attackDelay = 1f;
+    private float nextAttack = 0f;
+
 	// Use this for initialization
 	void Start () {
         e_anim = GetComponent<Animator>();
@@ -21,26 +24,28 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         
-        if(agent.remainingDistance > 10)
+        if(agent.remainingDistance > agent.stoppingDistance)
         {
             e_anim.SetBool("IsMoving", true);
             agent.isStopped = false;
         }
-        else
+        else if(agent.remainingDistance <= agent.stoppingDistance)
         {
             e_anim.SetBool("IsMoving", false);
             agent.isStopped = true;
         }
 
-        if(agent.isStopped == true)
+        if(agent.isStopped == true && Time.time > nextAttack)
         {
-            StartCoroutine(AttackDelay(1));
+            Attack();
+            nextAttack = Time.time + attackDelay;
         }
 
         if(hp <= 0)
         {
             Destroy(this.gameObject);
         }
+        FindTarget();
 	}
 
     public void TakeDamage(int amount)
