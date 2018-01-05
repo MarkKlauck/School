@@ -24,6 +24,13 @@ public class Player : MonoBehaviour {
         hp = amnt;
     }
 
+    public void AddHP(int amnt)
+    {
+        hp += amnt;
+        if (hp >= maxhp)
+            hp = maxhp;
+    }
+
     public int GetHP()
     {
         return hp;
@@ -32,6 +39,11 @@ public class Player : MonoBehaviour {
     public void SetMaxHP(int amnt)
     {
         maxhp = amnt;
+    }
+
+    public void AddMaxHP(int amnt)
+    {
+        maxhp += amnt;
     }
 
     public int GetMaxHP()
@@ -49,15 +61,41 @@ public class Player : MonoBehaviour {
         damage = amnt;
     }
 
-   /* void CamDelay()
+    public void AddDamage(int amnt)
     {
-       // Camera Cam = GetComponentInChildren<Camera>();
-        Debug.Log(Cam.gameObject.name);
-        Vector3 MoveCamTo = transform.position - transform.forward * 15f + Vector3.up * 20f;
-        float bias = 0.97f;
-        Cam.transform.position = Cam.transform.position * bias +
-                                         MoveCamTo * (1.0f - bias);
-        Cam.transform.LookAt(transform.position + transform.forward * 25f);
+        damage += amnt;
     }
-    */
+
+    public void PickupItem(Constants.PickupType type, int value)
+    {
+        switch (type)
+        {
+            case Constants.PickupType.HEALTH:
+                {
+                    AddHP(value);
+                }
+                break;
+            case Constants.PickupType.MAXHP:
+                {
+                    AddMaxHP(value);
+                }
+                break;
+            case Constants.PickupType.ARMOR:
+                break;
+            case Constants.PickupType.ATTACK:
+                {
+                    AddDamage(value);
+                }
+                break;
+            case Constants.PickupType.ATTACK_SPEED:
+                break;
+            case Constants.PickupType.MANA:
+                break;
+            case Constants.PickupType.INVERNERABLE:
+                break;
+            default:
+                break;
+        }
+    }
+
 }
