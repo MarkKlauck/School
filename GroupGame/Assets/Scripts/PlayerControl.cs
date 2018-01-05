@@ -127,7 +127,6 @@ public class PlayerControl : MonoBehaviour {
     {
         Camera Cam = GetComponentInChildren<Camera>();
         Cam.fieldOfView = 65;
-        Debug.Log(Cam.gameObject.name);
         Vector3 MoveCamTo = transform.position - transform.forward * 7f + Vector3.up * 8f;
         float bias = 0.97f;
         Cam.transform.position = Cam.transform.position * bias +

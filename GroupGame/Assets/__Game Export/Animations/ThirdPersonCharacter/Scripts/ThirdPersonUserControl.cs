@@ -7,6 +7,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     [RequireComponent(typeof (ThirdPersonCharacter))]
     public class ThirdPersonUserControl : MonoBehaviour
     {
+        public GameObject cam;
         private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
         private Transform m_Cam;                  // A reference to the main camera in the scenes transform
         private Vector3 m_CamForward;             // The current forward direction of the camera
@@ -18,12 +19,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Start()
         {
-
             anim = GetComponent<Animator>();
             // get the transform of the main camera
             if (Camera.main != null)
             {
-                m_Cam = GetComponentInChildren<Camera>().transform;
+                m_Cam = cam.GetComponent<Camera>().transform;  //GetComponentInChildren<Camera>().transform;
             }
 
             // get the third person character ( this should never be null due to require component )

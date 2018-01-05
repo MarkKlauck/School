@@ -23,7 +23,6 @@ public class SpawnControl : MonoBehaviour {
         {
             yield return new WaitForSeconds(3);
             int i = Random.Range(0, n);
-            Debug.Log(i);
             if(i == lastSpawnLoc)
             {
                 i++;

@@ -1576,28 +1576,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 289229464}
   m_Mesh: {fileID: 4300002, guid: a02222d69f5a2cd42b19f38cba29bf3e, type: 3}
---- !u!1 &335848669 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1741337710543518, guid: efcde68487fa6174ba4e5c2aa34762e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1445829861}
---- !u!143 &335848670
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 335848669}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2.5
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.4, z: 0}
 --- !u!1001 &337866547
 Prefab:
   m_ObjectHideFlags: 0
