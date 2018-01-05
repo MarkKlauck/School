@@ -35,6 +35,7 @@ public class PlayerControl : MonoBehaviour {
     void Update () {
         
         AttackEvents();
+        CamDelay();
 
         #region for debugging controller input
         /*for (int i = 1; i <= 16; i++)
@@ -100,7 +101,19 @@ public class PlayerControl : MonoBehaviour {
     {
         return isAttacking;
     }
-    
+
+    void CamDelay()
+    {
+        Camera Cam = GetComponentInChildren<Camera>();
+        Cam.fieldOfView = 65;
+        Debug.Log(Cam.gameObject.name);
+        Vector3 MoveCamTo = transform.position - transform.forward * 7f + Vector3.up * 8f;
+        float bias = 0.97f;
+        Cam.transform.position = Cam.transform.position * bias +
+                                         MoveCamTo * (1.0f - bias);
+        Cam.transform.LookAt(transform.position + transform.forward * 25f);
+    }
+
     private void AttackEvents()
     {
         if (Input.GetKeyDown("joystick " + joyNum + " button 2") && Time.time > nextLight)// && anim.GetCurrentAnimatorStateInfo(0).

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     private int hp, maxhp, damage;
-
+    //public Camera Cam;
     //collision stuff here?
 
     // Use this for initialization
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+      //  CamDelay();
     }
     //use to set hp to a specified amount
     public void SetHp(int amnt)
@@ -97,4 +97,5 @@ public class Player : MonoBehaviour {
                 break;
         }
     }
+
 }
