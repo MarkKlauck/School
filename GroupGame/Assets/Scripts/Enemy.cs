@@ -9,23 +9,34 @@ public class Enemy : MonoBehaviour {
     private int hp = 5;
     private NavMeshAgent agent;
     private Transform target;
+    private Animator e_anim;
+    private int attack = 0;
 	// Use this for initialization
 	void Start () {
+        e_anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         FindTarget();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if(!agent)
+        
+        if(agent.remainingDistance > 10)
         {
-            agent = GetComponent<NavMeshAgent>();
-            FindTarget();
+            e_anim.SetBool("IsMoving", true);
+            agent.isStopped = false;
         }
         else
         {
-            FindTarget();
+            e_anim.SetBool("IsMoving", false);
+            agent.isStopped = true;
         }
+
+        if(agent.isStopped == true)
+        {
+            StartCoroutine(AttackDelay(1));
+        }
+
         if(hp <= 0)
         {
             Destroy(this.gameObject);
@@ -51,5 +62,25 @@ public class Enemy : MonoBehaviour {
             }
         }
         agent.SetDestination(target.position);
+    }
+
+    IEnumerator AttackDelay(float t)
+    {
+        yield return new WaitForSeconds(t);
+        Attack();
+    }
+
+    private void Attack()
+    {
+        if(attack == 0)
+        {
+            e_anim.SetTrigger("IsAttack");
+            attack = 1;
+        }
+        else if(attack == 1)
+        {
+            e_anim.SetTrigger("IsAttack2");
+            attack = 0;
+        }
     }
 }
