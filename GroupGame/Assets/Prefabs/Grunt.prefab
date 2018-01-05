@@ -1580,7 +1580,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1631912160383540}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 343.16, y: 0, z: 237.00725}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
@@ -1588,7 +1588,7 @@ Transform:
   - {fileID: 4196577240674046}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &95491201440790614
 Animator:
   serializedVersion: 3
@@ -1598,7 +1598,7 @@ Animator:
   m_GameObject: {fileID: 1631912160383540}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e9332b82da4812a49916bf8fc87b2332, type: 3}
-  m_Controller: {fileID: 9100000, guid: 934583b6988575142a3a25c6bc11d9fc, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1b8e458510f918141a1dcdf09df394b7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1639,6 +1639,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -1654,6 +1655,7 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1734,16 +1736,16 @@ NavMeshAgent:
   m_GameObject: {fileID: 1631912160383540}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 10
-  m_Acceleration: 8
+  m_Radius: 1
+  m_Speed: 5
+  m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 8
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 3
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
