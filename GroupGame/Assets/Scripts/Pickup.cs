@@ -7,9 +7,11 @@ public class Pickup : MonoBehaviour
     private Constants.PickupType type;
     public int value;
     // Use this for initialization
+
     void Start()
     {
         type = (Constants.PickupType)Random.Range(0, System.Enum.GetValues(typeof(Constants.PickupType)).Length);
+        GetComponent<Rigidbody>().AddForce(transform.up * 30, ForceMode.Impulse);
     }
 
     // Update is called once per frame

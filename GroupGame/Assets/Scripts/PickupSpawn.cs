@@ -50,6 +50,8 @@ public class PickupSpawn : MonoBehaviour {
     public void DecrementCurrentItems()
     {
         --currentSpawnItems;
+        if (currentSpawnItems < 0)
+            currentSpawnItems = 0;
     }
 
     void SpawnItems()
