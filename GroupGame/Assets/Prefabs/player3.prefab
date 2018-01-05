@@ -694,6 +694,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4503434720497230}
+  - component: {fileID: 114670285162770096}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -2265,7 +2266,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1020690556094468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8d3968294210ba4a9d2bb96dfa74a16, type: 3}
   m_Name: 
@@ -2300,6 +2301,21 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1.5
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
+--- !u!114 &114670285162770096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682894697871604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edddcc223b1ccd94885ecdf9de5dc2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_cameraShake: 0
+  default_shake_duration: 1.2
+  shake_amount: 0.7
+  decrease_factor: 1
 --- !u!114 &114831317942894954
 MonoBehaviour:
   m_ObjectHideFlags: 1

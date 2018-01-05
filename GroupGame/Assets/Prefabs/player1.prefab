@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 114462516255225484}
   m_Layer: 0
   m_Name: MultipurposeCameraRig
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: -215833656, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,6 +389,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4993242719199504}
+  - component: {fileID: 114334024039820302}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -2955,6 +2956,21 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
+--- !u!114 &114334024039820302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1277985562191156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edddcc223b1ccd94885ecdf9de5dc2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_cameraShake: 0
+  default_shake_duration: 1
+  shake_amount: 0.7
+  decrease_factor: 1
 --- !u!114 &114398134119286388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2980,12 +2996,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1270550191721282}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8d3968294210ba4a9d2bb96dfa74a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Target: {fileID: 4871044750389516}
+  m_Target: {fileID: 0}
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
   m_MoveSpeed: 3
@@ -3030,7 +3046,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1270550191721282}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94b04ec3bda6b7747aa53936ef3b0ae2, type: 3}
   m_Name: 
