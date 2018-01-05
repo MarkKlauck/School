@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour {
     private float attackDelay = 1f;
     private float nextAttack = 0f;
 
+
+    public GameObject PickupItem;
 	// Use this for initialization
 	void Start () {
         e_anim = GetComponent<Animator>();
@@ -87,5 +89,10 @@ public class Enemy : MonoBehaviour {
             e_anim.SetTrigger("IsAttack2");
             attack = 0;
         }
+    }
+
+    void DropItems()
+    {
+        GameObject go = Instantiate(PickupItem, transform.position, Quaternion.identity) as GameObject;
     }
 }
