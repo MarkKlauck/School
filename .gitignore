@@ -4,6 +4,9 @@
 GroupGame/Temp/
 GroupGame/Library/
 
+# Visual Studio 2015 cache directory
+GroupGame/.vs/
+
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
