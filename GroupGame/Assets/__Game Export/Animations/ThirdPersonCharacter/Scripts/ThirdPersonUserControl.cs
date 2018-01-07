@@ -23,11 +23,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // get the transform of the main camera
             if (Camera.main != null)
             {
-<<<<<<< HEAD
-                m_Cam = cam.GetComponent<Camera>().transform;  //GetComponentInChildren<Camera>().transform;
-=======
                 m_Cam = Camera.main.transform;
->>>>>>> parent of dccad29... ***fixed player turning
             }
 
             // get the third person character ( this should never be null due to require component )
