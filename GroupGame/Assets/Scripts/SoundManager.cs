@@ -30,8 +30,8 @@ public class SoundManager : MonoBehaviour {
 
 
     void Start () {
-		
-	}
+        DontDestroyOnLoad(gameObject);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -39,7 +39,7 @@ public class SoundManager : MonoBehaviour {
 		
 	}
 
-    void PlayBackgroundMusic(AudioClip backgroundMusic)
+    public void PlayBackgroundMusic(AudioClip backgroundMusic)
     {
         if (audioSource.isPlaying == true)
             audioSource.Stop();
@@ -48,7 +48,13 @@ public class SoundManager : MonoBehaviour {
         audioSource.Play();
     }
 
-    void PlaySound(AudioClip clip)
+    public void ChangeBackgroundMusic(AudioClip music)
+    {
+        PlayBackgroundMusic(music);
+    }
+
+
+    public void PlaySound(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
         
