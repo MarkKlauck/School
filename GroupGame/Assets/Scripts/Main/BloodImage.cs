@@ -20,7 +20,7 @@ public class BloodImage : MonoBehaviour {
     {
         if(blood_start)
         {
-           // float fPercent = (float)player.GetHP() / (float)player.GetMaxHP();
+            float fPercent = GetComponent<Attribute>().GetHP() / GetComponent<Attribute>().GetMaxHP();
             if(fPercent <= fade_start_percent)
             {
                 float alpha;
