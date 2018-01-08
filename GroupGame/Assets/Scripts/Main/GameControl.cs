@@ -64,7 +64,7 @@ public class GameControl : MonoBehaviour
 
     public void SetPlayerCount()
     {
-        players = PlayerPrefs.GetInt("PlayerCount");
+        players = PlayerPrefs.GetInt("PlayerCount", 1);
     }
 
     #region game setup stuff
