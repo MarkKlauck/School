@@ -3,19 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-   
+    //public GameObject hpBar;
+
+    private float hp, maxHp;
+    private PlayerAttribute pa;
+    private int playernum;
     //collision stuff here?
 
     // Use this for initialization
     void Start() {
-    
+        playernum = GetComponent<PlayerControl>().GetPlayerNumber();
+        pa = GetComponent<PlayerAttribute>();
+        hp = pa.GetHP();
+        maxHp = pa.GetMaxHP();
     }
 
     // Update is called once per frame
     void Update() {
+        GetStats();
+        UIManager.instance.SetHealthBar(hp, maxHp, "player" + playernum);
       //  CamDelay();
     }
    
+    private void GetStats()
+    {
+        hp = pa.GetHP();
+    }
 
     public void PickupItem(Constants.PickupType type, int value)
     {
