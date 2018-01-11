@@ -42,7 +42,8 @@ public class LoadSceneAsync : MonoBehaviour {
    
     IEnumerator IE_NextLoadScene()
     {
-        yield return null;
+        // wating 1 sec to look good
+        yield return new WaitForSeconds(1.0f);
 
         AsyncOperation async_op = SceneManager.LoadSceneAsync(next_scene_name);
         async_op.allowSceneActivation = false;
