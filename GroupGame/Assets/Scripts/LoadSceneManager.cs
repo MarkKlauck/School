@@ -75,7 +75,8 @@ public class LoadSceneManager : MonoBehaviour {
 
     public void LoadScene(string name)
     {
-        SceneManager.LoadScene(name);
+        LoadSceneAsync.LoadScene(name);
+       // SceneManager.LoadScene(name);
     }
 
     public void LoadScene(int sceneIndex)
