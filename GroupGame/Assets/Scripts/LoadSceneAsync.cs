@@ -63,7 +63,7 @@ public class LoadSceneAsync : MonoBehaviour {
                 //25 offset ( half size of image )
                 float scr_pos_x = (loading_screen_bar.fillAmount * screen_width) + image_offsetX;
                 loading_screen_image.rectTransform.anchoredPosition = new Vector2(scr_pos_x, image_offsetY);
-                Debug.Log(loading_screen_image.rectTransform.anchoredPosition);
+               // Debug.Log(loading_screen_image.rectTransform.anchoredPosition);
 
                 float progress_num = loading_screen_bar.fillAmount * 100.0f;
                 int roundNum = Mathf.RoundToInt(progress_num);
@@ -82,7 +82,7 @@ public class LoadSceneAsync : MonoBehaviour {
                 //25 offset ( half size of image )
                 float scr_pos_x = (loading_screen_bar.fillAmount * screen_width) + image_offsetX;
                 loading_screen_image.rectTransform.anchoredPosition = new Vector2(scr_pos_x, image_offsetY);
-                Debug.Log(loading_screen_image.rectTransform.anchoredPosition);
+               // Debug.Log(loading_screen_image.rectTransform.anchoredPosition);
                 float progress_num_ = loading_screen_bar.fillAmount * 100.0f;
                 int round_progress_num = Mathf.RoundToInt(progress_num_);
                 loading_text.text = round_progress_num.ToString() + "%";
