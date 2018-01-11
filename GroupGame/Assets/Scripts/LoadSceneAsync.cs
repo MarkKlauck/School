@@ -25,7 +25,7 @@ public class LoadSceneAsync : MonoBehaviour {
         SceneManager.LoadScene("Loading");
     }
     void Start () {
-        screen_width = cScaler.referenceResolution.x;
+        screen_width = cScaler.referenceResolution.x - 50;
 
         loading_screen_image.rectTransform.anchoredPosition = new Vector2(image_offsetX, image_offsetY);
         loading_screen_bar.fillAmount = 0;
@@ -51,7 +51,7 @@ public class LoadSceneAsync : MonoBehaviour {
 
         while(async_op.isDone == false)
         {
-            yield return null;
+            yield return new WaitForSeconds(0.1f);
             fTime += Time.smoothDeltaTime;
 
             if(async_op.progress >= 0.9f)
@@ -60,7 +60,7 @@ public class LoadSceneAsync : MonoBehaviour {
                 loading_screen_bar.fillAmount = Mathf.Lerp(loading_screen_bar.fillAmount, 1f, fTime);
 
                 //25 offset ( half size of image )
-                float scr_pos_x = (loading_screen_bar.fillAmount * screen_width) - image_offsetX;
+                float scr_pos_x = (loading_screen_bar.fillAmount * screen_width) + image_offsetX;
                 loading_screen_image.rectTransform.anchoredPosition = new Vector2(scr_pos_x, image_offsetY);
                 Debug.Log(loading_screen_image.rectTransform.anchoredPosition);
 
@@ -79,9 +79,9 @@ public class LoadSceneAsync : MonoBehaviour {
                 loading_screen_bar.fillAmount = Mathf.Lerp(loading_screen_bar.fillAmount, async_op.progress, fTime);
               
                 //25 offset ( half size of image )
-                float scr_pos_x = (loading_screen_bar.fillAmount * screen_width) - image_offsetX;
+                float scr_pos_x = (loading_screen_bar.fillAmount * screen_width) + image_offsetX;
                 loading_screen_image.rectTransform.anchoredPosition = new Vector2(scr_pos_x, image_offsetY);
-                
+                Debug.Log(loading_screen_image.rectTransform.anchoredPosition);
                 float progress_num_ = loading_screen_bar.fillAmount * 100.0f;
                 int round_progress_num = Mathf.RoundToInt(progress_num_);
                 loading_text.text = round_progress_num.ToString() + "%";
