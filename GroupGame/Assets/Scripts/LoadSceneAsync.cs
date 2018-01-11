@@ -25,8 +25,6 @@ public class LoadSceneAsync : MonoBehaviour {
         SceneManager.LoadScene("Loading");
     }
     void Start () {
-
-        next_scene_name = "Main";
         screen_width = cScaler.referenceResolution.x;
 
         loading_screen_image.rectTransform.anchoredPosition = new Vector2(image_offsetX, image_offsetY);
