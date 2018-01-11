@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour
 {
+    [Range(0, 4)]
+    public int debugPlayers = 0;
+
     private int players;
     public Text[] plyrScore;
     public Rect[] camPos;
@@ -13,9 +16,18 @@ public class GameControl : MonoBehaviour
 
 	// Use this for initialization
 	void Awake () {
-        SetPlayerCount();
+        if(debugPlayers == 0)
+        {
+            SetPlayerCount();
+        }
+        else
+        {
+            players = debugPlayers;
+        }
+        
         SetScoreHUD();
         SetGame();
+
     }
 
     void Start()
