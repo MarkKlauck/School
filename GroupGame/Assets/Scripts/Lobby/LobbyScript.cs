@@ -43,6 +43,7 @@ public class LobbyScript : MonoBehaviour
                 buttons[playerNum - 1].gameObject.SetActive(false);
                 AddPlayer(i);
                 i = 0;
+                //SoundManager.Instance.PlaySound(audioClips[]);
                 break;
             }
         }

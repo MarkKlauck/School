@@ -2208,7 +2208,15 @@ MonoBehaviour:
   moveSpeed: 1
   sword: {fileID: 0}
   foot: {fileID: 0}
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: a2b512231063ddf4b84eb22ab0964a10, type: 3}
+  - {fileID: 8300000, guid: 175a383e30effa44d96bd01f241fc93a, type: 3}
+  - {fileID: 8300000, guid: bd5f52b31d2f92e4a882661ffaa66493, type: 3}
+  - {fileID: 8300000, guid: 7559aa1b5d8f15442a97d0e3816afd41, type: 3}
+  - {fileID: 8300000, guid: 41190ca72a2c1fc4b9539480b1129657, type: 3}
+  - {fileID: 8300000, guid: fcedf83dba797e74d8f939690ea6e149, type: 3}
+  - {fileID: 8300000, guid: 48e2cd597432f4d46b2d4f34c95f9acf, type: 3}
+  - {fileID: 8300000, guid: ed85a94189a01b54b9d2cd3ff020c808, type: 3}
 --- !u!114 &114686142693429762
 MonoBehaviour:
   m_ObjectHideFlags: 1

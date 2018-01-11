@@ -17,11 +17,14 @@ public class Attribute : MonoBehaviour
     [SerializeField]
     protected bool isAlive = true;
 
+    private CameraShake camShake;
     protected virtual void Start()
     {
         SetMaxHP(100);
         AddHP(100);
         SetDamage(40);
+
+        camShake = GetComponentInChildren<CameraShake>();
     }
 
     protected virtual void Update()
@@ -62,8 +65,13 @@ public class Attribute : MonoBehaviour
     }
 
 
-    public void TakeDamage(int amnt)
+    public void TakeDamage(int amnt, bool isCritical = false)
     {
+        if(isCritical== true)
+        {
+            camShake.ShakeCamera();
+        }
+
         hp -= amnt;
         if (hp <= 0.0f)
         {
