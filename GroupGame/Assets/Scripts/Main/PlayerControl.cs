@@ -146,6 +146,7 @@ public class PlayerControl : MonoBehaviour {
                         isAttacking = true;
                         sword.SetActive(true);
                         StartCoroutine(AttackDelay(lightDelay, sword));
+                        SoundManager.Instance.PlaySound(audioClips[0]);
                         break;
                     }
                 case 1:
@@ -154,6 +155,7 @@ public class PlayerControl : MonoBehaviour {
                         isAttacking = true;
                         sword.SetActive(true);
                         StartCoroutine(AttackDelay(lightDelay, foot));
+                        SoundManager.Instance.PlaySound(audioClips[0]);
                         break;
                     }
                 case 2:
@@ -162,6 +164,7 @@ public class PlayerControl : MonoBehaviour {
                         isAttacking = true;
                         sword.SetActive(true);
                         StartCoroutine(AttackDelay(lightDelay, sword));
+                        SoundManager.Instance.PlaySound(audioClips[0]);
                         break;
                     }
             }
@@ -186,6 +189,7 @@ public class PlayerControl : MonoBehaviour {
                 anim.SetTrigger("IsHeavyAttack");
                 isAttacking = true;
                 StartCoroutine(AttackDelay(delay));
+                SoundManager.Instance.PlaySound(audioClips[0]);
 
 
             }
@@ -194,6 +198,7 @@ public class PlayerControl : MonoBehaviour {
                 anim.SetTrigger("IsHeavyAttack2");
                 isAttacking = true;
                 StartCoroutine(AttackDelay(delay));
+                SoundManager.Instance.PlaySound(audioClips[0]);
 
             }
             else if (r == 2)
@@ -201,6 +206,7 @@ public class PlayerControl : MonoBehaviour {
                 anim.SetTrigger("IsHeavyAttack3");
                 isAttacking = true;
                 StartCoroutine(AttackDelay(delay));
+                SoundManager.Instance.PlaySound(audioClips[0]);
             }
             nextClick = Time.time + delay;
             nextLight = Time.time + lightDelay;
@@ -218,6 +224,7 @@ public class PlayerControl : MonoBehaviour {
             anim.SetTrigger("IsMagicLight");
             nextClick = Time.time + delay;
             nextLight = Time.time + lightDelay;
+            SoundManager.Instance.PlaySound(audioClips[7]);
 
 
         }
@@ -226,11 +233,13 @@ public class PlayerControl : MonoBehaviour {
             anim.SetTrigger("IsMagicHeavy");
             nextClick = Time.time + delay;
             nextLight = Time.time + lightDelay;
+            SoundManager.Instance.PlaySound(audioClips[7]);
 
         }
         if(Input.GetKeyDown("joystick " + joyNum + " button 0"))
         {
             isJumping = true;
+            SoundManager.Instance.PlaySound(audioClips[4]);
         }
         else
         {

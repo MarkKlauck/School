@@ -646,8 +646,7 @@ MonoBehaviour:
   moveSpeed: 1
   sword: {fileID: 0}
   foot: {fileID: 0}
-  axis: 
-  axisx: 
+  audioClips: []
 --- !u!114 &92983040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,6 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!136 &92983042
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3209,8 +3209,7 @@ MonoBehaviour:
   moveSpeed: 1
   sword: {fileID: 0}
   foot: {fileID: 0}
-  axis: 
-  axisx: 
+  audioClips: []
 --- !u!114 &672283101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3243,6 +3242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!136 &672283103
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4673,7 +4673,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6eedeb151124c624faea6786ff6c521b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2215e89ac6f0dc848a1aa9c6384c2295, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.276
   m_Pitch: 1
@@ -5917,8 +5917,7 @@ MonoBehaviour:
   moveSpeed: 1
   sword: {fileID: 0}
   foot: {fileID: 0}
-  axis: 
-  axisx: 
+  audioClips: []
 --- !u!114 &1151189663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5951,6 +5950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!136 &1151189665
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7941,8 +7941,7 @@ MonoBehaviour:
   moveSpeed: 1
   sword: {fileID: 0}
   foot: {fileID: 0}
-  axis: 
-  axisx: 
+  audioClips: []
 --- !u!114 &1478118256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7975,6 +7974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!136 &1478118258
 CapsuleCollider:
   m_ObjectHideFlags: 0
