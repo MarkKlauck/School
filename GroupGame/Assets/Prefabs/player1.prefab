@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 20941068927762334}
   - component: {fileID: 92372623887294526}
   - component: {fileID: 124654831707335844}
-  - component: {fileID: 81914363939284322}
   m_Layer: 0
   m_Name: player1Cam
   m_TagString: MainCamera
@@ -1929,7 +1928,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -2017,13 +2015,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.47, y: 0.15, z: 1.7}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!81 &81914363939284322
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1052910026580838}
-  m_Enabled: 1
 --- !u!92 &92372623887294526
 Behaviour:
   m_ObjectHideFlags: 1

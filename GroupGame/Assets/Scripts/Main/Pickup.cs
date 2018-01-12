@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    private AudioSource pickUp;
+
     private Constants.PickupType type;
     public int value;
     // Use this for initialization
@@ -12,6 +14,7 @@ public class Pickup : MonoBehaviour
     {
         type = (Constants.PickupType)Random.Range(0, System.Enum.GetValues(typeof(Constants.PickupType)).Length);
         GetComponent<Rigidbody>().AddForce(transform.up * 30, ForceMode.Impulse);
+        pickUp = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,6 +28,8 @@ public class Pickup : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Player>().PickupItem(type, value);
+            pickUp.Play();
+            pickUp.Stop();
         }
 
         //decrement current item
