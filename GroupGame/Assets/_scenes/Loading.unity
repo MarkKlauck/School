@@ -629,7 +629,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 03599a252ba13ad44a568f4c0470f853, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36a4880647e241146b17b07cb2ad143a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -672,12 +672,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Background_Image: {fileID: 799563219}
   images:
-  - {fileID: 21300000, guid: 00ba28cef5abf6a49ad5fd70cebf0fde, type: 3}
-  - {fileID: 21300000, guid: 03599a252ba13ad44a568f4c0470f853, type: 3}
-  - {fileID: 21300000, guid: 89cea2f8f962dbd4190398873a6a04a1, type: 3}
-  - {fileID: 21300000, guid: a8d06b297abb56a449d61695d809914a, type: 3}
-  - {fileID: 21300000, guid: 4bdd0e60f35e76441a44c5cd89eb8463, type: 3}
-  - {fileID: 21300000, guid: 92304ed11d43a714cb9ef2842b56a25e, type: 3}
+  - {fileID: 21300000, guid: 36a4880647e241146b17b07cb2ad143a, type: 3}
+  - {fileID: 21300000, guid: d8d81322ae822674e9f45be5adaefac3, type: 3}
+  - {fileID: 21300000, guid: e5785fb0d9c6ccd47834476eda69319c, type: 3}
+  - {fileID: 21300000, guid: 4bc5cce0f6cf7ac43b987a4aa25c7617, type: 3}
+  - {fileID: 21300000, guid: 676e1fd2987fd1641b2fb59707dc505e, type: 3}
+  - {fileID: 21300000, guid: c846d73f618db974bad84cac935305c4, type: 3}
   loading_screen_image: {fileID: 784503524}
   loading_screen_bar: {fileID: 1672735639}
   loading_text: {fileID: 1681287135}
