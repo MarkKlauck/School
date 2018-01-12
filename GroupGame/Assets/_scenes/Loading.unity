@@ -469,6 +469,20 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -626,7 +640,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cb1539e965ecd4d4eb91ddf61d2e23f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 03599a252ba13ad44a568f4c0470f853, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -669,12 +683,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Background_Image: {fileID: 799563219}
   images:
-  - {fileID: 21300000, guid: cb1539e965ecd4d4eb91ddf61d2e23f4, type: 3}
-  - {fileID: 21300000, guid: 72db4e8610a7d754e8ee89c2ce419960, type: 3}
-  - {fileID: 21300000, guid: a3fc0dd6322f13e4089804126f273401, type: 3}
-  - {fileID: 21300000, guid: 8ff5b9f8b2a36b043b8a0e6347029383, type: 3}
-  - {fileID: 21300000, guid: b41e5b2438f38ed4dad700d69064fc92, type: 3}
-  - {fileID: 21300000, guid: 46ef1bc6f64e4f94f97e1e64c4fb23f1, type: 3}
+  - {fileID: 21300000, guid: 00ba28cef5abf6a49ad5fd70cebf0fde, type: 3}
+  - {fileID: 21300000, guid: 03599a252ba13ad44a568f4c0470f853, type: 3}
+  - {fileID: 21300000, guid: 89cea2f8f962dbd4190398873a6a04a1, type: 3}
+  - {fileID: 21300000, guid: a8d06b297abb56a449d61695d809914a, type: 3}
+  - {fileID: 21300000, guid: 4bdd0e60f35e76441a44c5cd89eb8463, type: 3}
+  - {fileID: 21300000, guid: 92304ed11d43a714cb9ef2842b56a25e, type: 3}
   loading_screen_image: {fileID: 784503524}
   loading_screen_bar: {fileID: 1672735639}
   loading_text: {fileID: 1681287135}
