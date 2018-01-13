@@ -29,5 +29,12 @@ public class EnemyAttribute : Attribute {
     {
         return attackRange;
     }
-
+    public int GetHp()
+    {
+        return (int)hp;
+    }
+    public void TakeDamage(int amount)
+    {
+        hp -= amount;
+    }
 }

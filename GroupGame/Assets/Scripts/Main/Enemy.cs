@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
 
+    private EnemyAttribute ea;
     private int hp = 5;
     private NavMeshAgent agent;
     private Transform target;
@@ -13,46 +14,65 @@ public class Enemy : MonoBehaviour {
     private int attack = 0;
     private float attackDelay = 1f;
     private float nextAttack = 0f;
+    private float nextHit = 0f;
+    private float hitDelay = 1f;
 
 
     public GameObject PickupItem;
 	// Use this for initialization
 	void Start () {
         e_anim = GetComponent<Animator>();
+        ea = GetComponent<EnemyAttribute>();
         agent = GetComponent<NavMeshAgent>();
         FindTarget();
-	}
+        hp = ea.GetHp();
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        
-        if(agent.remainingDistance > agent.stoppingDistance)
+        //hp = ea.GetHp();
+        Debug.Log(hp);
+        if (hp <= 0)
         {
-            e_anim.SetBool("IsMoving", true);
-            agent.isStopped = false;
+            Debug.Log("DEAD");
+            e_anim.SetBool("IsDead", true);
+            e_anim.SetTrigger("Death4");
+            Destroy(this.gameObject, 10f);
         }
-        else if(agent.remainingDistance <= agent.stoppingDistance)
+        else
         {
-            e_anim.SetBool("IsMoving", false);
-            agent.isStopped = true;
-        }
 
-        if(agent.isStopped == true && Time.time > nextAttack)
-        {
-            Attack();
-            nextAttack = Time.time + attackDelay;
-        }
+            if (agent.remainingDistance > agent.stoppingDistance)
+            {
+                e_anim.SetBool("IsMoving", true);
+                agent.isStopped = false;
+            }
+            else if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                e_anim.SetBool("IsMoving", false);
+                agent.isStopped = true;
+            }
 
-        if(hp <= 0)
-        {
-            Destroy(this.gameObject);
+            if (agent.isStopped == true && Time.time > nextAttack)
+            {
+                Attack();
+                nextAttack = Time.time + attackDelay;
+            }
+
+
+            FindTarget();
         }
-        FindTarget();
 	}
 
     public void TakeDamage(int amount)
     {
-        hp -= amount;
+        if(Time.time > nextHit)
+        {
+            hp -= amount;
+            //ea.TakeDamage(amount);
+            nextHit = Time.time + hitDelay;
+        }
+        
     }
     void FindTarget()
     {

@@ -220,10 +220,9 @@ GameObject:
   - component: {fileID: 95590609543177446}
   - component: {fileID: 54385906168861436}
   - component: {fileID: 136154462742027942}
-  - component: {fileID: 114003873901141792}
-  - component: {fileID: 114938440281885066}
   - component: {fileID: 114092493212469624}
   - component: {fileID: 114260260162404684}
+  - component: {fileID: 114867939250063722}
   m_Layer: 0
   m_Name: player4
   m_TagString: Player
@@ -1524,7 +1523,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1203109278700160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 345.43454, y: 0, z: 225.82724}
+  m_LocalPosition: {x: 344.57153, y: 0, z: 228.23322}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4411491074706032}
@@ -1927,6 +1926,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -2142,18 +2142,6 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
---- !u!114 &114003873901141792
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1203109278700160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1844810783664744}
 --- !u!114 &114076028426055386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2192,6 +2180,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fcedf83dba797e74d8f939690ea6e149, type: 3}
   - {fileID: 8300000, guid: 48e2cd597432f4d46b2d4f34c95f9acf, type: 3}
   - {fileID: 8300000, guid: ed85a94189a01b54b9d2cd3ff020c808, type: 3}
+  axis: 
+  axisx: 
 --- !u!114 &114138927003367708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2264,7 +2254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1203109278700160}
---- !u!114 &114938440281885066
+--- !u!114 &114867939250063722
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2272,17 +2262,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1203109278700160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
+  m_Script: {fileID: 11500000, guid: 576546361d8c12c46b35a9071dfc7517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 420
-  m_StationaryTurnSpeed: 240
-  m_JumpPower: 20
-  m_GravityMultiplier: 4
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1.5
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 0.3
+  moveSpeed: 10
 --- !u!124 &124786556929714842
 Behaviour:
   m_ObjectHideFlags: 1

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    //public GameObject hpBar;
 
     private float hp, maxHp;
+    private int damage;
     private PlayerAttribute pa;
     private int playernum;
     //collision stuff here?
@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
         pa = GetComponent<PlayerAttribute>();
         hp = pa.GetHP();
         maxHp = pa.GetMaxHP();
+        damage = (int)pa.GetDamage();
     }
 
     // Update is called once per frame
@@ -30,6 +31,10 @@ public class Player : MonoBehaviour {
         hp = pa.GetHP();
     }
 
+    public int GetDamage()
+    {
+        return damage;
+    }
     public void PickupItem(Constants.PickupType type, int value)
     {
         switch (type)

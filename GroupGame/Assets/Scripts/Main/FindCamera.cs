@@ -12,14 +12,15 @@ public class FindCamera : MonoBehaviour {
         canvas = GetComponent<Canvas>();
         GameObject targetCam = GameObject.Find(pName);
         canvas.worldCamera = targetCam.GetComponent<Camera>();
+        if(canvas.worldCamera == null)
+        {
+            gameObject.SetActive(false);
+        }
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(canvas.worldCamera == null)
-        {
-            GameObject targetCam = GameObject.Find(pName);
-            canvas.worldCamera = targetCam.GetComponent<Camera>();
-        }
+		
 	}
 }

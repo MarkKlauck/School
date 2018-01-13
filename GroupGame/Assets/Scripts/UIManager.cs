@@ -7,7 +7,8 @@ public class UIManager : MonoBehaviour {
     public static UIManager instance = null;
 
     public int imageMaxWidth = 400;
-    public GameObject player1Hp;
+    [HideInInspector]
+    public GameObject player1Hp, player2Hp, player3Hp, player4Hp;
 	// Use this for initialization
 	void Start () {
 		if(instance == null)
@@ -33,6 +34,18 @@ public class UIManager : MonoBehaviour {
             case "player1":
                 {
                     return player1Hp;
+                }
+            case "player2":
+                {
+                    return player2Hp;
+                }
+            case "player3":
+                {
+                    return player3Hp;
+                }
+            case "player4":
+                {
+                    return player4Hp;
                 }
             default:
                 {

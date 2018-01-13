@@ -13,8 +13,8 @@ public class PlayerControl : MonoBehaviour {
     private int controllers;
     private int playerNum;
     private int joyNum;
-    private string axis = "";
-    private string axisx = "";
+    public string axis = "";
+    public string axisx = "";
     private float nextClick = 0.0f;
     private float nextLight = 0.0f;
     private float delay = 1.0f;
@@ -136,7 +136,7 @@ public class PlayerControl : MonoBehaviour {
 
     private void AttackEvents()
     {
-        if (Input.GetKeyDown("joystick " + joyNum + " button 2") && Time.time > nextLight)// && anim.GetCurrentAnimatorStateInfo(0).
+        if (Input.GetKeyDown("joystick " + joyNum + " button 2") && Time.time > nextLight && !isAttacking)
         {
             switch(light)
             {
@@ -146,7 +146,6 @@ public class PlayerControl : MonoBehaviour {
                         isAttacking = true;
                         sword.SetActive(true);
                         StartCoroutine(AttackDelay(lightDelay, sword));
-                        SoundManager.Instance.PlaySingleSound(audioClips[0]);
                         break;
                     }
                 case 1:
@@ -155,7 +154,6 @@ public class PlayerControl : MonoBehaviour {
                         isAttacking = true;
                         sword.SetActive(true);
                         StartCoroutine(AttackDelay(lightDelay, foot));
-                        SoundManager.Instance.PlaySingleSound(audioClips[0]);
                         break;
                     }
                 case 2:
@@ -164,7 +162,6 @@ public class PlayerControl : MonoBehaviour {
                         isAttacking = true;
                         sword.SetActive(true);
                         StartCoroutine(AttackDelay(lightDelay, sword));
-                        SoundManager.Instance.PlaySingleSound(audioClips[0]);
                         break;
                     }
             }
@@ -179,6 +176,7 @@ public class PlayerControl : MonoBehaviour {
             heavy = 0;
             nextClick = Time.time + delay;
             nextLight = Time.time + lightDelay;
+            SoundManager.Instance.PlaySingleSound("ScreamsShouts2_Humans_Male_Grunt-Shout_057");
 
         }
         if (Input.GetKeyDown("joystick " + joyNum + " button 3") && Time.time > nextClick)// && anim.GetCurrentAnimatorStateInfo(0).
@@ -189,7 +187,6 @@ public class PlayerControl : MonoBehaviour {
                 anim.SetTrigger("IsHeavyAttack");
                 isAttacking = true;
                 StartCoroutine(AttackDelay(delay));
-                SoundManager.Instance.PlaySingleSound(audioClips[0]);
 
 
             }
@@ -198,7 +195,6 @@ public class PlayerControl : MonoBehaviour {
                 anim.SetTrigger("IsHeavyAttack2");
                 isAttacking = true;
                 StartCoroutine(AttackDelay(delay));
-                SoundManager.Instance.PlaySingleSound(audioClips[0]);
 
             }
             else if (r == 2)
@@ -206,10 +202,10 @@ public class PlayerControl : MonoBehaviour {
                 anim.SetTrigger("IsHeavyAttack3");
                 isAttacking = true;
                 StartCoroutine(AttackDelay(delay));
-                SoundManager.Instance.PlaySingleSound(audioClips[0]);
             }
             nextClick = Time.time + delay;
             nextLight = Time.time + lightDelay;
+            SoundManager.Instance.PlaySingleSound("ScreamsShouts2_Humans_Male_Grunt-Shout_057");
 
         }
         if (Input.GetKeyDown("joystick " + joyNum + " button 1") && Time.time > nextClick)// && anim.GetCurrentAnimatorStateInfo(0).

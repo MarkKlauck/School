@@ -8,11 +8,13 @@ public class WeaponScript : MonoBehaviour {
     {
         if(other.CompareTag("Enemy"))
         {
-            if(player.GetComponent<PlayerControl>().IsAttacking())
-            {
-                other.gameObject.GetComponent<Enemy>().TakeDamage(1);
-            }
+            Debug.Log("Hit an enemy");
+            other.gameObject.GetComponent<Enemy>().TakeDamage(player.GetComponent<Player>().GetDamage());
             
+        }
+        else
+        {
+            Debug.Log(other.gameObject.name);
         }
     }
     // Use this for initialization
