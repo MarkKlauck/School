@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BloodImage : MonoBehaviour {
 
-    public Player player;
+    public GameObject player;
     public float fade_start_percent = 0.2f;
     public bool blood_start = false;
     private Image image;
@@ -20,7 +20,7 @@ public class BloodImage : MonoBehaviour {
     {
         if(blood_start)
         {
-            float fPercent = GetComponent<Attribute>().GetHP() / GetComponent<Attribute>().GetMaxHP();
+            float fPercent = player.GetComponent<Attribute>().GetHP() / player.GetComponent<Attribute>().GetMaxHP();
             if(fPercent <= fade_start_percent)
             {
                 float alpha;

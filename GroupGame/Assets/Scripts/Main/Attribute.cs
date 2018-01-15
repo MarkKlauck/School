@@ -20,10 +20,7 @@ public class Attribute : MonoBehaviour
     private CameraShake camShake;
     protected virtual void Start()
     {
-        SetMaxHP(100);
-        AddHP(100);
-        SetDamage(40);
-
+        Revive();
         camShake = GetComponentInChildren<CameraShake>();
     }
 
@@ -31,6 +28,15 @@ public class Attribute : MonoBehaviour
     {
         
     }
+
+    public void Revive()
+    {
+        SetMaxHP(100);
+        AddHP(100);
+        SetDamage(40);
+        GetComponentInChildren<BlackScreen>().TurnOffBlackScreen();
+    }
+
 
     public void AddHP(int amnt)
     {
@@ -77,6 +83,8 @@ public class Attribute : MonoBehaviour
         {
             hp = 0.0f;
             isDying = false;
+
+            GetComponentInChildren<BlackScreen>().TurnOnBlackScreen();
         }
     }
 
